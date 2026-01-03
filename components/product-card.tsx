@@ -1,23 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import type Stripe from "stripe";
 
-export interface Product {
-  id: string;
-  name: string;
-  description?: string;
-  images?: string[];
-  default_price?: {
-    unit_amount: number;
-  };
-}
+export type Product = Stripe.Product;
 
 interface ProductCardProps {
   product: Product;
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const price = product.default_price?.unit_amount
-    ? `$${(product.default_price.unit_amount / 100).toFixed(2)}`
+  const defaultPrice = product.default_price as Stripe.Price | null;
+  const price = defaultPrice?.unit_amount
+    ? `$${(defaultPrice.unit_amount / 100).toFixed(2)}`
     : "—";
 
   const image = product.images?.[0];

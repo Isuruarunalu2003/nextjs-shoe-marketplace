@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ProductCard, type Product } from "./product-card";
+import { ProductCard } from "./product-card";
 import { ProductCardSkeleton } from "./product-card-skeleton";
+import type Stripe from "stripe";
 
 interface CarouselProps {
-  products?: Product[];
+  products?: Stripe.Product[];
   loading?: boolean;
 }
 
