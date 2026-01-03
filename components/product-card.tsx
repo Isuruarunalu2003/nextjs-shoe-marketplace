@@ -1,8 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export interface Product {
+  id: string;
+  name: string;
+  description?: string;
+  images?: string[];
+  default_price?: {
+    unit_amount: number;
+  };
+}
+
 interface ProductCardProps {
-  product: any;
+  product: Product;
 }
 
 export function ProductCard({ product }: ProductCardProps) {

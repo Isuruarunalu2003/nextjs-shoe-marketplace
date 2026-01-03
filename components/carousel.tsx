@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ProductCard } from "./product-card";
+import { ProductCard, type Product } from "./product-card";
 import { ProductCardSkeleton } from "./product-card-skeleton";
 
 interface CarouselProps {
-  products?: any[];
+  products?: Product[];
   loading?: boolean;
 }
 

@@ -3,10 +3,17 @@
 import { stripe } from "@/lib/stripe";
 import { redirect } from "next/navigation";
 
+interface CartItem {
+  name: string;
+  imageUrl?: string;
+  price: number;
+  quantity: number;
+}
+
 export async function checkoutAction(formData: FormData) {
   const items = JSON.parse(formData.get("items") as string);
 
-  const lineItems = items.map((item: any) => ({
+  const lineItems = items.map((item: CartItem) => ({
     price_data: {
       currency: "usd",
       product_data: {
