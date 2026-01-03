@@ -56,7 +56,7 @@ You can view the responsive live version of the project here:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone (https://github.com/Isuruarunalu2003/nextjs-shoe-marketplace.git)
 ```
 
 ### 2. Install dependencies
