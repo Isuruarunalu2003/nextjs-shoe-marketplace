@@ -15,6 +15,7 @@ interface CartStore {
   removeItem: (id: string) => void;
   openCart: () => void;
   closeCart: () => void;
+  clearCart: () => void;
 }
 
 export const useCartStore = create<CartStore>((set) => ({
@@ -43,4 +44,5 @@ export const useCartStore = create<CartStore>((set) => ({
 
   openCart: () => set({ isOpen: true }),
   closeCart: () => set({ isOpen: false }),
+  clearCart: () => set({ items: [] }),
 }));
