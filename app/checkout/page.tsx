@@ -21,9 +21,9 @@ export default function CheckoutPage() {
 
           {items.map((item) => (
             <div key={item.id} className="flex gap-4">
-              {item.image && (
+              {item.imageUrl && (
                 <Image
-                  src={item.image}
+                  src={item.imageUrl}
                   alt={item.name}
                   width={72}
                   height={72}
