@@ -38,7 +38,7 @@ Below is a comparison of the key files created in this project:
 
 You can view the responsive live version of the project here:
 
-**🔗 Live Demo:** *[#](https://nextjs-shoe-marketplace-fcb5.vercel.app/)*
+**🔗 Live Demo:** *[shoe-marketplace](https://nextjs-shoe-marketplace-fcb5.vercel.app/)*
 
 ---
 
