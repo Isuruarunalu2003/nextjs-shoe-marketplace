@@ -4,6 +4,9 @@ import { stripe } from "@/lib/stripe";
 import { Carousel } from "@/components/carousel";
 import { Button } from "@/components/ui/button";
 
+// Force the page to be dynamic (fetches on every request, not at build time)
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const products = await stripe.products.list({
     expand: ["data.default_price"],
